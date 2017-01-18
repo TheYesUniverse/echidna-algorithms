@@ -6,7 +6,7 @@ describe.only('factorial()', function(){
   it('should be a function', function(){
     expect(factorial).to.be.a('function');
   })
-  it('',function (){
+  it('should calculate the factorial of a number',function (){
     expect(factorial(5)).to.equal(120);
     expect(factorial(6)).to.equal(720);
     expect(factorial(9)).to.equal(1772928);
@@ -16,3 +16,5 @@ describe.only('factorial()', function(){
     it('should return false', function(){
       expect(factorial('someword')).to.equal(false)
     })
+  })
+})
