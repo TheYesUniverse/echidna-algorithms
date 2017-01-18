@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import factorial from '../src/factorial'
 
-describe.only('factorial()', function(){
+describe('factorial()', function(){
     'use strict'
   it('should be a function', function(){
     expect(factorial).to.be.a('function');
@@ -15,6 +15,8 @@ describe.only('factorial()', function(){
   context('when given a string', function(){
     it('should return false', function(){
       expect( () => factorial('string')).to.throw("Invalid Input")
+      // why wont this work???
+      // expect( () => factorial('string')).to.throw("Invalid Input")
     })
   })
 })
