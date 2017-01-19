@@ -1,4 +1,4 @@
-function collatzConjecture (n){
+const collatzConjecture = (start) => {
 
   let array = []
   function collatz(n){
@@ -22,5 +22,6 @@ function collatzConjecture (n){
 
     return array
   }
+  collatzConecture(start)
 }
-export default collatzConjecture 
+export default collatzConjecture
