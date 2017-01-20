@@ -1,9 +1,11 @@
-const collatzConjecture = (start) => {
+const collatz = (start) => {
 
   let array = []
-  function collatz(n){
 
-
+  const collatzConj = (n) => {
+    if(typeof(n) !== 'number'){
+      throw "InvalidInput"
+    }
     array.push(n)
 
     if(n === 1){
@@ -16,12 +18,9 @@ const collatzConjecture = (start) => {
     if(n % 2 === 0){
       n = n /2
     }
-
-    collatz(n)
-
-
-    return array
+    collatzConj(n)
   }
-  collatzConecture(start)
+  collatzConj(start)
+  return array
 }
-export default collatzConjecture
+export default collatz
